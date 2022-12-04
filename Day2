@@ -1,0 +1,20 @@
+--We made a bear that says stuff when we come close to it
+prox=workspace.Model.Head.ProximityPrompt
+bob=game.StarterGui.ScreenGui.TextLabel
+stage = 1
+
+prox.Triggered:Connect(function()
+    if stage == 1 then
+        bob.Text = "HI IM AM A BEAR"
+        
+    elseif stage == 2 then
+        bob.Text = "HI IM NOT A BEAR"
+        
+    elseif stage == 3 then
+        bob.Text = "Hi I am actually a bear"
+        
+    else
+        bob.Text="amongus"
+    end
+    stage=stage+1
+end)
