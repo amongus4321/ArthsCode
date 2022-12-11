@@ -1,0 +1,25 @@
+--first script
+local part = workspace.Part
+local rotation = workspace.Rotation
+local i = true
+while true do
+    local location = workspace.Dummy.HumanoidRootPart.Position
+    part.Position = Vector3.new((location.X + math.random(-10,10)), (location.Y + math.random(1,5)), (location.Z + math.random(-10,10)))
+    rotation.Orientation = Vector3.new(rotation.Orientation.X, rotation.Orientation.Y + math.random(-180,180), rotation.Orientation.Z)
+    wait(1)
+end
+-- different script
+local i = true
+local rotation = workspace.Rotation
+
+while true do
+    wait(0.2)
+    if i then
+        rotation.Orientation = Vector3.new(rotation.Orientation.X, rotation.Orientation.Y, 50)
+        i = not i
+    else
+        rotation.Orientation = Vector3.new(rotation.Orientation.X, rotation.Orientation.Y, 310)
+        i = not i
+    end
+end
+-- the code has a bee that flies around a dummy. its movement is relative to an invisible brick that changes allignment
